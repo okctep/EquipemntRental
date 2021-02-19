@@ -1,0 +1,63 @@
+﻿@model List<EquipmentViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{ var counter = 1; }
+<div class="container">
+    <div class="row">
+        @foreach (var equipment in Model)
+        {
+            <div class="card-deck">
+                <!-- 4 of these -->
+                <div class="card" style="width: 21rem; margin: 25px">
+                    <img width="300" height="300" src="~/img/@equipment.Img" />
+                    <div class="card-body">
+                        <h5 class="card-title">@equipment.Name</h5>
+                        <h6 class="equipment-type">@equipment.Type</h6>
+                        <p class="card-text">@equipment.Description</p>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Days</span>
+                            </div>
+                            <input type="number" value="1" class="rental-days form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                            <input type="button" value="Add to card" class="addToCardBtn btn btn-secondary form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            if (counter % 3 == 0)
+            {
+            @:</div><div class="row">
+                counter = 0;
+            }
+            counter++;
+
+
+        }
+    </div>
+</div>
+
+<div id="rentedEquipemntListModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Rented equipemnt</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Empty.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="generateInvoice" type="button" class="btn btn-primary">Get invoice</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

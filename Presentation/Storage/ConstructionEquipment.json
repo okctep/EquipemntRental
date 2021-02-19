@@ -1,0 +1,34 @@
+{
+  "Equipemnt": [
+    {
+      "name": "Caterpillar bulldozer",
+      "type": "Heavy",
+      "Img": "bulldozer.png",
+      "Description": "Good equipemnt"
+    },
+    {
+      "name": "KamAZ truck",
+      "type": "Regular",
+      "Img": "kamaz.png",
+      "Description": "Good equipemnt"
+    },
+    {
+      "name": "Komatsu crane",
+      "type": "Heavy",
+      "Img": "KomatsuCrane.png",
+      "Description": "Good equipemnt"
+    },
+    {
+      "name": "Volvo steamroller",
+      "type": "Regular",
+      "Img": "VolvoSteamroller.png",
+      "Description": "Good equipemnt"
+    },
+    {
+      "name": "Bosch jackhammer",
+      "type": "Specialized",
+      "Img": "BoschJackhammer.png",
+      "Description": "Good equipemnt"
+    }
+  ]
+}
